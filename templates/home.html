@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row align-items-center">
+  <div class="col-md-7">
+    <h1 class="display-5 fw-bold">Netball Player Registration</h1>
+    <p class="lead">Register players, manage tournaments and teams, and search registrations by 4-digit number.</p>
+    <div class="d-flex gap-3">
+      <a href="/players/register/" class="btn btn-primary btn-lg">Register Now</a>
+      <a href="/players/search/" class="btn btn-outline-primary btn-lg">Find Registration</a>
+      <a href="/admin/" class="btn btn-outline-secondary btn-lg">Admin Login</a>
+    </div>
+  </div>
+  <div class="col-md-5 text-center">
+    <div class="p-4 bg-light rounded shadow-sm">
+      <h5 class="mb-3">Features</h5>
+      <ul class="list-unstyled text-start m-0">
+        <li>? Player registration with photo</li>
+        <li>? Tournament consent selection</li>
+        <li>? Admin: tournaments & teams</li>
+        <li>? Admin filters by age & category</li>
+        <li>? Search by 4-digit number</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

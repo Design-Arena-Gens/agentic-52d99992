@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-4">Search Registration</h2>
+<div class="row g-3">
+  <div class="col-md-6">
+    <label for="code" class="form-label">Enter 4-digit Registration Number</label>
+    <input id="code" name="code" class="form-control" maxlength="4" placeholder="e.g. 0421"
+           hx-get="/players/search/result/" hx-target="#result" hx-trigger="keyup changed delay:300ms" hx-params="*">
+  </div>
+</div>
+<div id="result" class="mt-4"></div>
+{% endblock %}

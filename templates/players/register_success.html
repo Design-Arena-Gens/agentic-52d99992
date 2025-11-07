@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center py-5">
+  <h2 class="mb-3">Registration Successful</h2>
+  <p class="lead">Thank you, <strong>{{ player.name }}</strong>.</p>
+  <p>Your registration number is:</p>
+  <div class="display-3 fw-bold text-primary">{{ player.registration_number }}</div>
+  <p class="mt-3">Please write this down for future reference.</p>
+  <div class="mt-4">
+    <a class="btn btn-outline-primary" href="/players/search/">Search by Number</a>
+  </div>
+</div>
+{% endblock %}

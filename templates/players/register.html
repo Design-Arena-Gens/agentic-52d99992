@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="mb-4">Player Registration</h2>
+<form method="post" enctype="multipart/form-data" class="row g-3">
+  {% csrf_token %}
+  <div class="col-md-6">{{ form.name.label_tag }} {{ form.name|as_widget(attrs={'class':'form-control'}) }}</div>
+  <div class="col-md-3">{{ form.date_of_birth.label_tag }} {{ form.date_of_birth }}</div>
+  <div class="col-md-3">{{ form.gender.label_tag }} {{ form.gender }}</div>
+  <div class="col-md-3">{{ form.category.label_tag }} {{ form.category }}</div>
+  <div class="col-md-3">{{ form.playing_position.label_tag }} {{ form.playing_position|as_widget(attrs={'class':'form-control'}) }}</div>
+  <div class="col-md-6">{{ form.institution_name.label_tag }} {{ form.institution_name|as_widget(attrs={'class':'form-control'}) }}</div>
+  <div class="col-md-6">{{ form.photo.label_tag }} {{ form.photo|as_widget(attrs={'class':'form-control'}) }}</div>
+  <div class="col-md-6">{{ form.tournament_consent.label_tag }} {{ form.tournament_consent|as_widget(attrs={'class':'form-select'}) }}</div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Register</button>
+  </div>
+</form>
+{% endblock %}
